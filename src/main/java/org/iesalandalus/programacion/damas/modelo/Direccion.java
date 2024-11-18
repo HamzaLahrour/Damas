@@ -7,5 +7,8 @@ public enum Direccion {
     SUROESTE("SUROESTE"),
     NOROESTE("NOROESTE");
 
+    String cadenaAMostrar;
+
+
 
 }
