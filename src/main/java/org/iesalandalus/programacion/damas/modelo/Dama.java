@@ -13,7 +13,7 @@ public class Dama {
         return color;
     }
 
-    public void setColor(Color color) {
+    private void setColor(Color color) {
 
         switch (color){
 
@@ -122,6 +122,168 @@ public class Dama {
         this.posicion = posicion1;
 
     }
+
+    public Dama(Color color) {
+        this.color = color;
+        this.posicion=crearPosicionInicial(color);
+
+    }
+
+    private Posicion crearPosicionInicial (Color color){
+
+
+
+       if (color==Color.BLANCO){
+
+           int fila = (int) (Math.random()*3) + 1;
+           int columnaRandom =(int) (Math.random()*4)+1;
+           char columna=' ';
+
+
+           switch (fila){
+
+               case 1:
+                   switch (columnaRandom){
+
+                       case 1:
+                           columna='b';
+                           break;
+
+                       case 2:
+                           columna='d';
+                           break;
+                       case 3:
+                           columna='f';
+                           break;
+                       case 4:
+                           columna='h';
+                           break;
+                   }
+                   break;
+               case 2:
+                   switch (columnaRandom){
+
+                       case 1:
+                           columna='a';
+                           break;
+
+                       case 2:
+                           columna='c';
+                           break;
+                       case 3:
+                           columna='e';
+                           break;
+                       case 4:
+                           columna='g';
+                           break;
+                   }
+                   break;
+               case 3:
+                   switch (columnaRandom){
+
+                       case 1:
+                           columna='b';
+                           break;
+
+                       case 2:
+                           columna='d';
+                           break;
+                       case 3:
+                           columna='f';
+                           break;
+                       case 4:
+                           columna='h';
+
+                   }
+
+
+           }
+
+           Posicion posicion3 = new Posicion(fila,columna);
+           return posicion3;
+
+       }else{
+
+           int max=8;
+           int min=6;
+
+           int fila = (int) (Math.random() * ( max - min + 1)) + min;
+           int columnaRandom =(int) (Math.random()*4)+1;
+           char columna=' ';
+
+
+
+           System.out.println(columnaRandom);
+
+           switch (fila){
+
+               case 6:
+                   switch (columnaRandom){
+
+                       case 1:
+                           columna='a';
+                           break;
+
+                       case 2:
+                           columna='c';
+                           break;
+                       case 3:
+                           columna='e';
+                           break;
+                       case 4:
+                           columna='g';
+                           break;
+                   }
+                   break;
+               case 7:
+                   switch (columnaRandom){
+
+                       case 1:
+                           columna='b';
+                           break;
+
+                       case 2:
+                           columna='d';
+                           break;
+                       case 3:
+                           columna='f';
+                           break;
+                       case 4:
+                           columna='h';
+                           break;
+                   }
+                   break;
+               case 8:
+                   switch (columnaRandom){
+
+                       case 1:
+                           columna='a';
+                           break;
+
+                       case 2:
+                           columna='c';
+                           break;
+                       case 3:
+                           columna='e';
+                           break;
+                       case 4:
+                           columna='g';
+
+                   }
+
+
+           }
+
+            Posicion posicion2 = new Posicion(fila,columna);
+
+
+           return posicion2;
+
+       }
+
+
+    }
+
 
 
 
