@@ -66,6 +66,14 @@ public class Posicion {
 
     }
 
+    public Posicion(Posicion posicion){
+
+        setFila(posicion.fila);
+        setColumna(posicion.columna);
+    }
+
+
+
 
 
 }
