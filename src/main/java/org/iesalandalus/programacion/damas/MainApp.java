@@ -8,10 +8,18 @@ import org.iesalandalus.programacion.damas.modelo.Posicion;
 
 import java.util.concurrent.atomic.DoubleAdder;
 
-public class MainApp {
+ public class MainApp {
 
-	Posicion posicion= new Posicion(2,'a');
+  public static void main(String[] args) {
 
-Dama dama= new Dama(Color.BLANCO, posicion, true);
+
+   Dama dama = new Dama();
+
+   System.out.println(dama.getPosicion());
+
+
+  }
+
+
 
 }
