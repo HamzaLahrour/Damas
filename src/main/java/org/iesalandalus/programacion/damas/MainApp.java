@@ -7,5 +7,4 @@ import org.iesalandalus.programacion.damas.modelo.Dama;
 
 public class MainApp {
 	
-	
-}
+	}
