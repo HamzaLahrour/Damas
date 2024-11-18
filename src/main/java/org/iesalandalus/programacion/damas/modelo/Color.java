@@ -4,6 +4,9 @@ public enum Color {
 
     BLANCO("BLANCO"),NEGRO("NEGRO");
 
+    String cadenaAMostrar;
+
+
 
 
 
