@@ -17,10 +17,25 @@ import java.util.concurrent.atomic.DoubleAdder;
 
    //System.out.println(dama.getPosicion());
 
-   Dama dama1 = new Dama(Color.NEGRO);
+   Consola.mostrarMenu();
 
-   System.out.println(dama1.getPosicion());
-   System.out.println(dama1.getColor());
+   //Dama dama1 = new Dama(Color.BLANCO);
+
+
+   //System.out.println(dama1.getPosicion());
+   //System.out.println(dama1.getColor());
+
+   //dama1.mover(Direccion.SUROESTE,1);
+
+
+
+
+
+
+
+
+   //System.out.println(dama1.getPosicion());
+
 
   //dama1.crearPosicionInicial(Color.NEGRO);
 

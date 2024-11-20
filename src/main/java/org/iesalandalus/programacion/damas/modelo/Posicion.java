@@ -12,7 +12,7 @@ public class Posicion {
         return fila;
     }
 
-    private void setFila(int fila) {
+    public void setFila(int fila) {
 
         if (fila>8 || fila<1){
 
@@ -26,7 +26,7 @@ public class Posicion {
         return columna;
     }
 
-    private void setColumna(char columna) {
+    public void setColumna(char columna) {
 
         switch (columna){
             case 'a':
