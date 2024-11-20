@@ -13,31 +13,34 @@ import java.util.concurrent.atomic.DoubleAdder;
   public static void main(String[] args) {
 
 
-   //Dama dama = new Dama();
-
-   //System.out.println(dama.getPosicion());
-
-   Consola.mostrarMenu();
-
-   //Dama dama1 = new Dama(Color.BLANCO);
 
 
-   //System.out.println(dama1.getPosicion());
-   //System.out.println(dama1.getColor());
-
-   //dama1.mover(Direccion.SUROESTE,1);
+    Consola.mostrarMenu();
+    Consola.elegirOpcionMenu();
 
 
 
+//   System.out.println(damaBlanca.getPosicion());
+//      try {
+//          damaBlanca.mover(Direccion.SURESTE,1);
+//      } catch (OperationNotSupportedException e) {
+//          throw new RuntimeException(e);
+//      }
+//      System.out.println(damaBlanca.getPosicion());
 
 
 
 
 
-   //System.out.println(dama1.getPosicion());
 
 
-  //dama1.crearPosicionInicial(Color.NEGRO);
+
+
+
+
+
+
+
 
   }
 

@@ -2,7 +2,7 @@ package org.iesalandalus.programacion.damas.modelo;
 
 public enum Color {
 
-    BLANCO("BLANCO"),NEGRO("NEGRO");
+    BLANCO("Blanco"),NEGRO("Negro");
 
     String cadenaAMostrar;
 
@@ -12,9 +12,7 @@ public enum Color {
 
     @Override
     public String toString() {
-        return "Color{" +
-                "cadenaAMostrar='" + cadenaAMostrar + '\'' +
-                '}';
+        return cadenaAMostrar ;
     }
 
 

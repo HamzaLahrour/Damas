@@ -2,10 +2,10 @@ package org.iesalandalus.programacion.damas.modelo;
 
 public enum Direccion {
 
-    NORESTE("NORESTE"),
-    SURESTE("SURESTE"),
-    SUROESTE("SUROESTE"),
-    NOROESTE("NOROESTE");
+    NORESTE("Noreste"),
+    SURESTE("Sureste"),
+    SUROESTE("Suroeste"),
+    NOROESTE("Noroeste");
 
     String cadenaAMostrar;
 
@@ -15,9 +15,7 @@ public enum Direccion {
 
     @Override
     public String toString() {
-        return "Direccion{" +
-                "cadenaAMostrar='" + cadenaAMostrar + '\'' +
-                '}';
+        return cadenaAMostrar;
     }
 }
 

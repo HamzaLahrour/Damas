@@ -126,8 +126,17 @@ public class Dama {
     }
 
     public Dama(Color color) {
+
+        if (color==null){
+
+            throw new NullPointerException("ERROR: El color no puede ser nulo.");
+
+        }
+
         this.color = color;
         this.posicion=crearPosicionInicial(color);
+
+
 
     }
 
@@ -286,11 +295,11 @@ public class Dama {
 
     }
 
-    public void mover (Direccion direccion,int pasos){
+    public void mover (Direccion direccion,int pasos) throws OperationNotSupportedException {
 
         if (direccion==null){
 
-            throw new NullPointerException("ERROR:La dirreción es nula");
+            throw new NullPointerException("ERROR: La dirección no puede ser nula.");
 
         }
 
@@ -298,21 +307,12 @@ public class Dama {
         if (pasos>=1){
             if (esDamaEspecial==false){
                 if (pasos!=1){
-                    try {
-                        throw new OperationNotSupportedException("ERROR:La dama no es especial, solo puedes mover un paso.");
-                    } catch (OperationNotSupportedException e) {
-                        throw new RuntimeException(e);
-                    }
+                    throw new OperationNotSupportedException("ERROR:La dama no es especial, solo puedes mover un paso.");
                 }
             }
         }else {
 
-            try {
-                throw new OperationNotSupportedException("ERROR:No puede ser un paso negativo.");
-            } catch (OperationNotSupportedException e) {
-                throw new RuntimeException(e);
-            }
-
+            throw new OperationNotSupportedException("ERROR:No puede ser un paso negativo.");
         }
 
         if (color==Color.NEGRO){
@@ -321,14 +321,7 @@ public class Dama {
 
 
                 if (direccion == Direccion.SURESTE || direccion == Direccion.SUROESTE) {
-
-                    try {
                         throw new OperationNotSupportedException("ERROR:La dama es negra,no puedes realizar movimientos al sureste o suroeste por que todavia no es una dama especial.");
-                    } catch (OperationNotSupportedException e) {
-                        throw new RuntimeException(e);
-                    }
-
-
                 }
 
 
@@ -337,12 +330,8 @@ public class Dama {
 
 
                     if (posicion.getColumna() == 'a' && direccion == Direccion.NOROESTE) {
+                        throw new OperationNotSupportedException("ERROR:No puedes mover la dama direccion noroeste por que se sale del tablero.");
 
-                        try {
-                            throw new OperationNotSupportedException("ERROR:No puedes mover la dama dirreccion noroeste por que se sale");
-                        } catch (OperationNotSupportedException e) {
-                            throw new RuntimeException(e);
-                        }
                     }
                     if (posicion.getColumna() == 'a' && direccion == Direccion.NORESTE) {
 
@@ -497,13 +486,7 @@ public class Dama {
 
                     }
                 } else if (posicion.getFila() == 1) {
-                    if (direccion==Direccion.NOROESTE || direccion==Direccion.NORESTE){
-                        try {
-                            throw new OperationNotSupportedException("ERROR:No puedes mover hacia la direccion noroeste o noreste por que estas en la fila 1 y la casilla se sale del tablero");
-                        } catch (OperationNotSupportedException e) {
-                            throw new RuntimeException(e);
-                        }
-                    }
+                    throw new OperationNotSupportedException("ERROR:No puedes mover hacia la direccion noroeste o noreste por que estas en la fila 1 y la casilla se sale del tablero");
                 }
 
 
@@ -520,13 +503,14 @@ public class Dama {
 
             if (esDamaEspecial==false){
 
+
                 if (direccion==Direccion.NOROESTE || direccion==Direccion.NORESTE){
-                    try {
-                        throw new OperationNotSupportedException("ERROR:No puedes mover una dama blanca direccion noroeste o noreste. Solo esta permitido para las damas especiales, por lo que las direcciones permitidas son suroeste y sureste.");
-                    } catch (OperationNotSupportedException e) {
-                        throw new RuntimeException(e);
-                    }
+                    throw new OperationNotSupportedException("ERROR:Las damas blancas no pueden moverse hacia las direcciones noroeste y noreste, deben ser especialas.");
+
                 }
+
+
+
 
                 if (posicion.getFila()==1 || posicion.getFila()==3 || posicion.getFila()==5 || posicion.getFila()==7){
 
@@ -592,12 +576,7 @@ public class Dama {
                     }
                     if (posicion.getColumna()=='h' && direccion==Direccion.SURESTE){
 
-                        try {
-                            throw new OperationNotSupportedException("ERROR:No puedes mover la dama direccion sureste por que se sale.");
-                        } catch (OperationNotSupportedException e) {
-                            throw new RuntimeException(e);
-                        }
-
+                        throw new OperationNotSupportedException("ERROR:No puedes mover la dama direccion sureste por que se sale.");
                     }
                     if (posicion.getColumna()=='h' && direccion==Direccion.SUROESTE){
                         int filaAlmacenam = posicion.getFila();
@@ -612,18 +591,16 @@ public class Dama {
 
                         esDamaEspecial=true;
 
-                        System.out.println("hola");
+
                     }
 
 
                 } else if (posicion.getFila()==2 || posicion.getFila()==4 || posicion.getFila()==6) {
 
                     if (posicion.getColumna()=='a' && direccion==Direccion.SUROESTE){
-                        try {
-                            throw new OperationNotSupportedException("ERROR:No puedes mover la dama direccion suroeste por que se sale del tablero");
-                        } catch (OperationNotSupportedException e) {
-                            throw new RuntimeException(e);
-                        }
+
+                        throw new OperationNotSupportedException("ERROR:No puedes mover la dama direccion suroeste por que se sale del tablero");
+
                     }
                     if (posicion.getColumna()=='a' && direccion==Direccion.SURESTE){
 
@@ -705,11 +682,9 @@ public class Dama {
 
                 } else if (posicion.getFila()==8 && direccion==Direccion.SURESTE || direccion==Direccion.SUROESTE) {
 
-                    try {
+
                         throw new OperationNotSupportedException("ERROR:Las direcciones sureste y suroeste en la fila 8 no son validas, por que se sale del tablero");
-                    } catch (OperationNotSupportedException e) {
-                        throw new RuntimeException(e);
-                    }
+
                 }
 
 
@@ -728,15 +703,14 @@ public class Dama {
 
 
 
-        }
+    }
 
 
-
-
-
-
-
-
+    @Override
+    public String toString() {
+        return "color=" + color +
+                "posicion=" + posicion;
+    }
 }
 
 

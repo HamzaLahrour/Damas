@@ -1,5 +1,6 @@
 package org.iesalandalus.programacion.damas;
 
+import org.iesalandalus.programacion.damas.modelo.Color;
 import org.iesalandalus.programacion.utilidades.Entrada;
 
 public class Consola {
@@ -20,15 +21,24 @@ public class Consola {
 
     }
 
-    //public static int elegirOpcionMenu (){
+    public static int elegirOpcionMenu (){
 
-        //int opcion;
+        int opcion=0;
 
-        //System.out.println("Elige una opcion");
-        //opcion= Entrada.entero();
+        do {
+            System.out.println("Elige una opcion del 1 al 4");
+            opcion= Entrada.entero();
+        }while (opcion<1 || opcion>4);
 
 
-     //return opcion;
-    //}
+     return opcion;
+    }
+
+//    public static Color elegirOpcion (){
+//
+//
+//
+//        return
+//    }
 
 }
