@@ -5,7 +5,7 @@ import org.iesalandalus.programacion.utilidades.Entrada;
 
 public class Consola {
 
-    public Consola() {
+    private Consola() {
 
 
 
@@ -34,11 +34,31 @@ public class Consola {
      return opcion;
     }
 
-//    public static Color elegirOpcion (){
-//
-//
-//
-//        return
-//    }
+    public static Color elegirColor (){
+
+        int color1=0;
+
+
+
+        do {
+
+            System.out.println("*** Elige un color ***");
+            System.out.println("1- BLANCO");
+            System.out.println("2- NEGRO");
+
+            System.out.println("Elija una opción del 1 al 2");
+            color1=Entrada.entero();
+        }while (color1!=1 && color1!=2);
+
+        if (color1==1){
+
+            return Color.BLANCO;
+        }else {
+
+            return Color.NEGRO;
+        }
+
+
+    }
 
 }

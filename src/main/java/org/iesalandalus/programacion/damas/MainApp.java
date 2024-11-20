@@ -15,8 +15,11 @@ import java.util.concurrent.atomic.DoubleAdder;
 
 
 
-    Consola.mostrarMenu();
-    Consola.elegirOpcionMenu();
+    //Consola.mostrarMenu();
+    //Consola.elegirOpcionMenu();
+
+
+    //Consola.elegirColor();
 
 
 
