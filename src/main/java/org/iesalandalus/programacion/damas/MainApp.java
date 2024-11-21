@@ -10,6 +10,8 @@ import java.util.concurrent.atomic.DoubleAdder;
 
  public class MainApp {
 
+     Dama dama;
+
   public static void main(String[] args) {
 
 
