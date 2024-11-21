@@ -22,14 +22,19 @@ import java.util.concurrent.atomic.DoubleAdder;
     //Consola.elegirColor();
 
 
+      Direccion direccion1=Consola.mostrarMenuDirecciones();
 
-//   System.out.println(damaBlanca.getPosicion());
-//      try {
-//          damaBlanca.mover(Direccion.SURESTE,1);
-//      } catch (OperationNotSupportedException e) {
-//          throw new RuntimeException(e);
-//      }
-//      System.out.println(damaBlanca.getPosicion());
+      Dama dama1= new Dama(Color.BLANCO);
+
+
+
+   System.out.println(dama1.getPosicion());
+      try {
+          dama1.mover(direccion1,1);
+      } catch (OperationNotSupportedException e) {
+          throw new RuntimeException(e);
+      }
+      System.out.println(dama1.getPosicion());
 
 
 

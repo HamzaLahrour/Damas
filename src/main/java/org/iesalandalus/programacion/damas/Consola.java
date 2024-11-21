@@ -1,6 +1,7 @@
 package org.iesalandalus.programacion.damas;
 
 import org.iesalandalus.programacion.damas.modelo.Color;
+import org.iesalandalus.programacion.damas.modelo.Direccion;
 import org.iesalandalus.programacion.utilidades.Entrada;
 
 public class Consola {
@@ -60,5 +61,50 @@ public class Consola {
 
 
     }
+
+    public static Direccion mostrarMenuDirecciones (){
+
+        int direccion1=0;
+
+        do {
+
+            System.out.println("*** Menu de direcciones ***");
+            System.out.println("1-Noroeste");
+            System.out.println("2-Noreste");
+            System.out.println("3-Suroeste");
+            System.out.println("4-Sureste");
+            System.out.println("Elija una opcion del 1 al 4:");
+            direccion1=Entrada.entero();
+
+        }while (direccion1<1 || direccion1>4);
+
+        if (direccion1==1){
+            return Direccion.NOROESTE;
+        }else if (direccion1==2){
+            return Direccion.NORESTE;
+        }else if (direccion1==3){
+            return Direccion.SUROESTE;
+        }else {
+            return Direccion.SURESTE;
+        }
+
+    }
+
+    public static int elegirPasos (){
+
+        int pasosElegidos;
+
+        System.out.println("Introduce los pasos, recuerda que si no es dama especial, solo puedes mover 1 paso.");
+        pasosElegidos=Entrada.entero();
+
+     return pasosElegidos;
+    }
+
+    public void despedirse (){
+
+        System.out.println("Gracias por usar el programa, nos vemos pronto. ");
+
+    }
+
 
 }
