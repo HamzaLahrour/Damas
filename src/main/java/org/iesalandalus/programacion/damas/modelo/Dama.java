@@ -134,13 +134,13 @@ public class Dama {
         }
 
         this.color = color;
-        this.posicion=crearPosicionInicial(color);
+        this.posicion=crearPosicionInicial();
 
 
 
     }
 
-    private Posicion crearPosicionInicial (Color color){
+    private Posicion crearPosicionInicial (){
 
 
 
@@ -400,6 +400,8 @@ public class Dama {
 
                     if (posicion.getFila()==1){
                         esDamaEspecial=true;
+
+                        System.out.println("Ahora es dama especial,puedes moverte en las 4 direcciones.");
                     }
 
 
@@ -505,7 +507,7 @@ public class Dama {
 
 
                 if (direccion==Direccion.NOROESTE || direccion==Direccion.NORESTE){
-                    throw new OperationNotSupportedException("ERROR:Las damas blancas no pueden moverse hacia las direcciones noroeste y noreste, deben ser especialas.");
+                    throw new OperationNotSupportedException("ERROR:Las damas blancas no pueden moverse hacia las direcciones noroeste y noreste, deben ser especiales.");
 
                 }
 
@@ -590,6 +592,8 @@ public class Dama {
                     if (posicion.getFila()==8){
 
                         esDamaEspecial=true;
+
+                        System.out.println("Ahora es dama especial, puedes moverte en las 4 direcciones.");
 
 
                     }
@@ -690,26 +694,14 @@ public class Dama {
 
             }
 
-
-
-
-
         }
-
-
-
-
-
-
-
 
     }
 
 
     @Override
     public String toString() {
-        return "color=" + color +
-                "posicion=" + posicion;
+        return "color=" + color + " " + "posicion=" + posicion;
     }
 }
 

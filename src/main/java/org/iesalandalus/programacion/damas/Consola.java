@@ -15,10 +15,11 @@ public class Consola {
 
     public static void mostrarMenu (){
         System.out.println("*** Menu de Opciones ***");
-        System.out.println("1- Crear dama por defecto");
-        System.out.println("2- Crear dama eligiendo el color");
-        System.out.println("3- Mover dama");
-        System.out.println("4- Salir");
+        System.out.println("1- Crear dama por defecto.");
+        System.out.println("2- Crear dama eligiendo el color.");
+        System.out.println("3- Mover dama.");
+        System.out.println("4- Mostrar informacion de la dama.");
+        System.out.println("5- Salir.");
 
     }
 
@@ -27,9 +28,9 @@ public class Consola {
         int opcion=0;
 
         do {
-            System.out.println("Elige una opcion del 1 al 4");
+            System.out.println("Elige una opcion del 1 al 5");
             opcion= Entrada.entero();
-        }while (opcion<1 || opcion>4);
+        }while (opcion<1 || opcion>5);
 
 
      return opcion;
@@ -100,7 +101,7 @@ public class Consola {
      return pasosElegidos;
     }
 
-    public void despedirse (){
+    public static void despedirse (){
 
         System.out.println("Gracias por usar el programa, nos vemos pronto. ");
 
